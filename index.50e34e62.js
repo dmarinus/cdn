@@ -2867,7 +2867,7 @@ function create_fragment$7(ctx) {
   let h2;
   let i;
   let t0;
-  let t1_value = ctx[0].sku ? "This item does not belong in this container!" : "You have already labelled the expected number of items for this SKU!";
+  let t1_value = ctx[0].sku ? "You have already labelled the expected number of items for this SKU!" : "This item does not belong in this container!";
   let t1;
   let t2;
   let div;
@@ -2916,7 +2916,7 @@ function create_fragment$7(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 1 && t1_value !== (t1_value = ctx2[0].sku ? "This item does not belong in this container!" : "You have already labelled the expected number of items for this SKU!"))
+      if (dirty & 1 && t1_value !== (t1_value = ctx2[0].sku ? "You have already labelled the expected number of items for this SKU!" : "This item does not belong in this container!"))
         set_data(t1, t1_value);
     },
     i(local) {
