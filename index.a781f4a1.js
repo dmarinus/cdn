@@ -2085,6 +2085,7 @@ function instance$d($$self, $$props, $$invalidate) {
     if (e.keyCode == 13 || e.keyCode == 9) {
       e.preventDefault();
       $$invalidate(1, errorMsg = null);
+      var printRFID = e.target.value.startsWith("RFID");
       var bc = e.target.value.replace("RFID", "");
       e.target.value = "";
       e.target.focus();
@@ -2108,7 +2109,7 @@ function instance$d($$self, $$props, $$invalidate) {
         set_store_value(insights, $insights.labelledSinceUpdate++, $insights);
         set_store_value(container, $container.qtyLabelled = $container.lines.reduce((a, c) => a + c.QTY_FINISHED, 0), $container);
       }
-      var ip = $container.printType == "R" ? $user.RFID_IP : $user.ZEBRA_IP;
+      var ip = printRFID ? $user.RFID_IP : $user.ZEBRA_IP;
       if (!ip || ip == "0.0.0.0") {
         set_store_value(prompt, $prompt = "printerNotSet", $prompt);
         return;
@@ -2119,8 +2120,8 @@ function instance$d($$self, $$props, $$invalidate) {
           x01: bc,
           x02: $container.id,
           x03: $container.store,
-          x04: $container.printType,
-          x05: $container.printType == "R" ? $user.RFID_IP : $user.ZEBRA_IP,
+          x04: printRFID ? "R" : "Z",
+          x05: ip,
           x06: $user.SITE
         },
         {
