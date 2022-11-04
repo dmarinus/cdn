@@ -1094,7 +1094,7 @@ function create_fragment$h(ctx) {
   }
   let current_block_type = select_block_type(ctx);
   let if_block0 = current_block_type(ctx);
-  let if_block1 = ctx[1] && ctx[1].IS_SUPER_USER && create_if_block_3$1(ctx);
+  let if_block1 = ctx[1] && ctx[1].IS_SUPER_USER == "Y" && create_if_block_3$1(ctx);
   function select_block_type_1(ctx2, dirty) {
     if (ctx2[0])
       return create_if_block_2$2;
@@ -1102,7 +1102,7 @@ function create_fragment$h(ctx) {
   }
   let current_block_type_1 = select_block_type_1(ctx);
   let if_block2 = current_block_type_1(ctx);
-  let if_block3 = ctx[1] && ctx[1].IS_SUPER_USER && create_if_block$8(ctx);
+  let if_block3 = ctx[1] && ctx[1].IS_SUPER_USER == "Y" && create_if_block$8(ctx);
   return {
     c() {
       main = element("main");
@@ -1192,7 +1192,7 @@ function create_fragment$h(ctx) {
           if_block0.m(div1, t5);
         }
       }
-      if (ctx2[1] && ctx2[1].IS_SUPER_USER) {
+      if (ctx2[1] && ctx2[1].IS_SUPER_USER == "Y") {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
         } else {
@@ -1214,7 +1214,7 @@ function create_fragment$h(ctx) {
           if_block2.m(div3, t12);
         }
       }
-      if (ctx2[1] && ctx2[1].IS_SUPER_USER) {
+      if (ctx2[1] && ctx2[1].IS_SUPER_USER == "Y") {
         if (if_block3) {
           if_block3.p(ctx2, dirty);
         } else {
@@ -1280,7 +1280,7 @@ function instance$h($$self, $$props, $$invalidate) {
       teamPerformanceChart.data.datasets[0].data.push(hh.TEAM_ITEMS);
     });
     teamPerformanceChart.update();
-    if ($user.IS_SUPER_USER) {
+    if ($user.IS_SUPER_USER == "Y") {
       issuesChart.data.labels = [];
       issuesChart.data.datasets[0].data = [];
       $insights.ISSUES.forEach((i) => {
@@ -1357,7 +1357,7 @@ function instance$h($$self, $$props, $$invalidate) {
         }
       }
     );
-    if ($user.IS_SUPER_USER) {
+    if ($user.IS_SUPER_USER == "Y") {
       issuesChart = new Chart(
         document.getElementById("issuesChart"),
         {
@@ -1961,7 +1961,7 @@ function create_fragment$d(ctx) {
   let mounted;
   let dispose;
   let if_block0 = ctx[4].printType == "R" && create_if_block_2$1();
-  let if_block1 = ctx[3].IS_SUPER_USER && create_if_block_1$2(ctx);
+  let if_block1 = ctx[3].IS_SUPER_USER == "Y" && create_if_block_1$2(ctx);
   let if_block2 = ctx[1] && create_if_block$5(ctx);
   return {
     c() {
@@ -2026,7 +2026,7 @@ function create_fragment$d(ctx) {
         if_block0.d(1);
         if_block0 = null;
       }
-      if (ctx2[3].IS_SUPER_USER) {
+      if (ctx2[3].IS_SUPER_USER == "Y") {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
         } else {
@@ -2574,7 +2574,7 @@ function create_fragment$9(ctx) {
   let main_intro;
   let mounted;
   let dispose;
-  let if_block = ctx[0].IS_SUPER_USER && create_if_block$4(ctx);
+  let if_block = ctx[0].IS_SUPER_USER == "Y" && create_if_block$4(ctx);
   return {
     c() {
       main = element("main");
@@ -2615,7 +2615,7 @@ function create_fragment$9(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (ctx2[0].IS_SUPER_USER) {
+      if (ctx2[0].IS_SUPER_USER == "Y") {
         if (if_block) {
           if_block.p(ctx2, dirty);
         } else {
