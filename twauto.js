@@ -28,7 +28,7 @@ var queu = [
     {building: 'wood', level: 28}, {building: 'stone', level: 28},{building: 'iron', level: 28},{building: 'storage', level: 28}, {building: 'farm', level: 28},
     {building: 'wood', level: 29}, {building: 'stone', level: 29},{building: 'iron', level: 29},{building: 'storage', level: 29}, {building: 'farm', level: 29},
     {building: 'wood', level: 30}, {building: 'stone', level: 30},{building: 'iron', level: 30},{building: 'storage', level: 30}, {building: 'farm', level: 30},
-    {building: 'wall', level: 20}, {building: 'smith', level: 20}, {building: 'market', level: 10}, {building: 'barracks', level: 20}, {building: 'stable', level: 10}
+    {building: 'wall', level: 20}, {building: 'smith', level: 20}, {building: 'market', level: 10}, {building: 'barracks', level: 25}, {building: 'stable', level: 20}, {building: 'academy', level: 1},{building: 'workshop', level: 5}
     ];
     
 const processQueue = () => {
