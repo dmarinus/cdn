@@ -38,7 +38,7 @@ const processQueue = () => {
         return;
     }
 
-    var upgradeButton = document.querySelectorAll("a[data-building='" + queu[0].building + "']")[0];
+    var upgradeButton = document.querySelectorAll("a.btn-build[data-building='" + queu[0].building + "']")[0];
 
     if(!upgradeButton){
         console.log('upgradeButton for ' +  queu[0].building + ' not found');
